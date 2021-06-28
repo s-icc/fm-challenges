@@ -12,25 +12,54 @@
             href="./images/favicon-32x32.png"
         />
 
-        <title>Frontend Mentor | Base Apparel coming soon page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+            rel="stylesheet"
+        />
 
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
+        <link rel="stylesheet" href="styles.css" />
+
+        <title>Frontend Mentor | Base Apparel coming soon page</title>
     </head>
     <body>
-        We're coming soon Hello fellow shoppers! We're currently building our
-        new fashion store. Add your email below to stay up-to-date with
-        announcements and our launch deals. Email Address
+        <div class="container">
+            <div class="bg-gradient"></div>
+            <img
+                src="images/bg-pattern-desktop.svg"
+                class="bg-pattern"
+                alt="pattern"
+            />
+            <img src="images/hero-desktop.jpg" class="hero" alt="hero" />
+            <div class="content">
+                <img
+                    src="images/logo.svg"
+                    class="logo"
+                    alt="logo Base Apparel"
+                />
+                <h1 class="coming-soon">
+                    <span class="were">We're </span>coming soon
+                </h1>
+                <p class="coming-soon__message">
+                    Hello fellow shoppers! We're currently building our new
+                    fashion store. Add your email below to stay up-to-date with
+                    announcements and our launch deals.
+                </p>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    class="input-email"
+                    placeholder="Email Address"
+                />
+                <button type="submit" class="submit-email">
+                    <img src="images/icon-arrow.svg" alt="icon arrow" />
+                </button>
+            </div>
+        </div>
 
-        <footer>
+        <!-- <footer>
             <p class="attribution">
                 Challenge by
                 <a
@@ -39,6 +68,6 @@
                     >Frontend Mentor</a
                 >. Coded by <a href="#">Stiven Mart&iacute;nez</a>.
             </p>
-        </footer>
+        </footer> -->
     </body>
 </html>
