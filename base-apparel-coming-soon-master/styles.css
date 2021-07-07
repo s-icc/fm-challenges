@@ -9,25 +9,39 @@ body {
     background-color: #f0f0f0;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-    width: 65vw;
-    height: 450px;
+.card {
+    width: 920px;
+    height: 500px;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 305px;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.15));
+    display: flex;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.hero {
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    width: auto;
+    height: 100%;
+    position: relative;
+    padding: 2.5rem 5rem 2.5rem 4rem;
+    box-sizing: border-box;
 }
 
 .bg-pattern {
     width: 100%;
     height: 100%;
     position: absolute;
-    grid-column: 1 / 2;
     z-index: -1;
+    left: 0;
+    top: 0;
 }
 
 .bg-gradient {
@@ -39,24 +53,9 @@ body {
         hsl(0, 0%, 100%),
         hsl(0, 100%, 98%)
     );
-    grid-column: 1 / 2;
     z-index: -1;
-}
-
-.hero {
-    height: 100%;
-    position: absolute;
-    grid-column: 2 / 3;
-    z-index: -1;
-}
-
-.content {
-    width: 100%;
-    height: 100%;
-    padding-top: 2rem;
-    padding-left: 4rem;
-    box-sizing: border-box;
-    grid-column: 1 / 2;
+    left: 0;
+    top: 0;
 }
 
 .logo {
@@ -82,24 +81,38 @@ body {
     width: 80%;
     font-weight: 400;
     color: var(--desaturated-red);
+    line-height: 20px;
+}
+
+.form-container {
+    width: 80%;
+    height: 50px;
+    position: relative;
+    margin-top: 13px;
 }
 
 .input-email {
-    width: 70%;
+    position: absolute;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
     background-color: transparent;
-    margin-top: 0.8rem;
     padding: 1rem 1.5rem;
     border-radius: 1.5rem;
     border: 1px solid hsl(0, 36%, 85%);
+    transition: box-shadow 150ms linear;
 }
 
 .input-email::placeholder {
     color: hsl(0, 36%, 85%);
 }
 
+.input-email:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 .submit-email {
-    width: 91px;
-    padding: 0;
+    width: 15%;
     position: absolute;
     padding: 13px 0;
     border: none;
@@ -109,6 +122,24 @@ body {
         hsl(0, 80%, 86%),
         hsl(0, 74%, 74%)
     );
-    transform: translate(-90px, 12px);
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.15));
+    right: 0;
+    transition: box-shadow 150ms linear;
+}
+
+.submit-email:hover,
+.submit-email:focus {
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        135deg,
+        hsl(0, 80%, 94%),
+        hsl(0, 74%, 82%)
+    );
+}
+
+@media (max-width: 745px) {
+    .card {
+        flex-direction: column;
+    }
 }

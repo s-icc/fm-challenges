@@ -24,15 +24,14 @@
         <title>Frontend Mentor | Base Apparel coming soon page</title>
     </head>
     <body>
-        <div class="container">
-            <div class="bg-gradient"></div>
-            <img
-                src="images/bg-pattern-desktop.svg"
-                class="bg-pattern"
-                alt="pattern"
-            />
-            <img src="images/hero-desktop.jpg" class="hero" alt="hero" />
+        <article class="card">
             <div class="content">
+                <div class="bg-gradient"></div>
+                <img
+                    src="images/bg-pattern-desktop.svg"
+                    class="bg-pattern"
+                    alt="pattern"
+                />
                 <img
                     src="images/logo.svg"
                     class="logo"
@@ -46,18 +45,21 @@
                     fashion store. Add your email below to stay up-to-date with
                     announcements and our launch deals.
                 </p>
-                <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    class="input-email"
-                    placeholder="Email Address"
-                />
-                <button type="submit" class="submit-email">
-                    <img src="images/icon-arrow.svg" alt="icon arrow" />
-                </button>
+                <div class="form-container">
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="input-email"
+                        placeholder="Email Address"
+                    />
+                    <button type="submit" class="submit-email">
+                        <img src="images/icon-arrow.svg" alt="icon arrow" />
+                    </button>
+                </div>
             </div>
-        </div>
+            <img src="images/hero-desktop.jpg" class="hero" alt="hero" />
+        </article>
 
         <!-- <footer>
             <p class="attribution">
