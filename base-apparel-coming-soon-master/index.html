@@ -32,33 +32,39 @@
                     class="bg-pattern"
                     alt="pattern"
                 />
-                <img
-                    src="images/logo.svg"
-                    class="logo"
-                    alt="logo Base Apparel"
-                />
-                <h1 class="coming-soon">
-                    <span class="were">We're </span>coming soon
-                </h1>
-                <p class="coming-soon__message">
+		<div class="content__header">
+		    <img
+                        src="images/logo.svg"
+                        class="logo"
+                        alt="logo Base Apparel"
+                    />
+		</div>
+		<div class="content__hero"></div>
+
+		<div class="content__body">
+		    <h1 class="coming-soon">
+                        <span class="were">We're </span>coming soon
+                    </h1>
+		    <p class="coming-soon__message">
                     Hello fellow shoppers! We're currently building our new
                     fashion store. Add your email below to stay up-to-date with
                     announcements and our launch deals.
-                </p>
-                <div class="form-container">
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        class="input-email"
-                        placeholder="Email Address"
-                    />
-                    <button type="submit" class="submit-email">
-                        <img src="images/icon-arrow.svg" alt="icon arrow" />
-                    </button>
-                </div>
-            </div>
-            <img src="images/hero-desktop.jpg" class="hero" alt="hero" />
+		    </p>
+		    <form class="form-container">
+			<input
+			    type="email"
+			    name="email"
+			    id="email"
+			    class="input-email"
+			    placeholder="Email Address"
+			/>
+			<button type="submit" class="submit-email">
+			    <img src="images/icon-arrow.svg" alt="icon arrow" />
+			</button>
+                    </form>
+	        </div>
+	    </div>
+            <img srcset="images/hero-desktop.jpg 1440w, images/hero-mobile.jpg 745w" src="images/hero-desktop.jpg" class="hero" alt="hero" />
         </article>
 
         <!-- <footer>

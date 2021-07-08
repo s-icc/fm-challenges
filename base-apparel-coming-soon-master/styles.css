@@ -12,11 +12,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .card {
-    width: 920px;
-    height: 500px;
+    width: 1020px;
+    height: 580px;
     position: relative;
     display: flex;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
@@ -31,8 +32,10 @@ body {
     width: auto;
     height: 100%;
     position: relative;
-    padding: 2.5rem 5rem 2.5rem 4rem;
+    padding: 2.6rem 5rem 2.5rem 10%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .bg-pattern {
@@ -58,14 +61,26 @@ body {
     top: 0;
 }
 
+.content__header {
+  height: auto;
+}
+
 .logo {
-    height: 16px;
+    width: 120px;
+}
+
+.content__body {
+  height: 68%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 5rem;
 }
 
 .coming-soon {
-    width: 50%;
-    margin-top: 3.5rem;
-    font-size: 36px;
+    width: min-content;
+    margin: 0;
+    font-size: 8vmin;
     color: hsl(0, 6%, 24%);
     text-transform: uppercase;
     letter-spacing: 0.6rem;
@@ -78,7 +93,8 @@ body {
 }
 
 .coming-soon__message {
-    width: 80%;
+    width: 90%;
+    margin: 0;
     font-weight: 400;
     color: var(--desaturated-red);
     line-height: 20px;
@@ -88,18 +104,21 @@ body {
     width: 80%;
     height: 50px;
     position: relative;
-    margin-top: 13px;
+    display: flex;
+    align-items: center;
 }
 
 .input-email {
+    width: 100%;
     position: absolute;
     font-size: 16px;
     font-family: 'Josefin Sans', sans-serif;
     background-color: transparent;
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 25% 0.75rem 1.5rem;
     border-radius: 1.5rem;
     border: 1px solid hsl(0, 36%, 85%);
     transition: box-shadow 150ms linear;
+    box-sizing: border-box;
 }
 
 .input-email::placeholder {
@@ -112,9 +131,9 @@ body {
 }
 
 .submit-email {
-    width: 15%;
+    width: 24%;
     position: absolute;
-    padding: 13px 0;
+    padding: 11px 0;
     border: none;
     border-radius: 1.5rem;
     background-image: linear-gradient(
@@ -140,6 +159,36 @@ body {
 
 @media (max-width: 745px) {
     .card {
+	height: 90vh;
+	width: 90vw;
         flex-direction: column;
+	text-align: center;
+    }
+
+    .content {
+      height: 100%;
+      padding: 0;
+    }
+
+    .content__header {
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .content__hero {
+      width: 100%;
+      height: 10%;
+    }
+    
+    .hero {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+
+    .content__body {
+      height: 350px;
+      align-items: center;
+      margin-top: 6rem;
     }
 }
