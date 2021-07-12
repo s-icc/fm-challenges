@@ -25,18 +25,22 @@
     </head>
     <body>
         <article class="card">
-            <div class="content">
-                <div class="bg-gradient"></div>
-                <img
-                    src="images/bg-pattern-desktop.svg"
-                    class="bg-pattern"
-                    alt="pattern"
-                />
+            <div class="bg-gradient"></div>
+            <img
+                src="images/bg-pattern-desktop.svg"
+                class="bg-pattern"
+                alt="pattern"
+            />
+
+            <div class="card__header">
                 <img
                     src="images/logo.svg"
                     class="logo"
                     alt="logo Base Apparel"
                 />
+            </div>
+
+            <div class="card__content">
                 <h1 class="coming-soon">
                     <span class="were">We're </span>coming soon
                 </h1>
@@ -45,7 +49,7 @@
                     fashion store. Add your email below to stay up-to-date with
                     announcements and our launch deals.
                 </p>
-                <div class="form-container">
+                <form id="form" class="form-container">
                     <input
                         type="email"
                         name="email"
@@ -53,12 +57,19 @@
                         class="input-email"
                         placeholder="Email Address"
                     />
-                    <button type="submit" class="submit-email">
+                    <button type="submit" class="submit-email" id="submit">
                         <img src="images/icon-arrow.svg" alt="icon arrow" />
                     </button>
-                </div>
+                </form>
             </div>
-            <img src="images/hero-desktop.jpg" class="hero" alt="hero" />
+
+            <picture class="card__image">
+                <source
+                    media="(max-width: 745px)"
+                    srcset="images/hero-mobile.jpg"
+                />
+                <img src="images/hero-desktop.jpg" alt="hero" class="hero" />
+            </picture>
         </article>
 
         <!-- <footer>
@@ -71,5 +82,7 @@
                 >. Coded by <a href="#">Stiven Mart&iacute;nez</a>.
             </p>
         </footer> -->
+
+        <script src="validator.js"></script>
     </body>
 </html>
