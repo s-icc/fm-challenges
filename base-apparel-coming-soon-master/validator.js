@@ -1,8 +1,10 @@
+let bgPattern = document.getElementById('bgPattern')
 let form = document.getElementById('form')
+let mq = window.matchMedia('(max-width: 745px)')
 
 const validateEmail = (email) => {
     const emailRegex =
-        /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,6}))$/
 
     if (emailRegex.test(email)) return true
     else return false
@@ -14,24 +16,28 @@ form.addEventListener('submit', (e) => {
 
     if (validateEmail(email)) {
         form.email.classList.remove('invalid-email')
-        icon.remove()
-        errorText.remove()
+        if (form.icon) icon.remove()
+        if (form.children.errorText) errorText.remove()
     } else {
-        let image = document.createElement('img')
-        image.src = 'images/icon-error.svg'
-        image.classList.add('icon-error')
-        image.id = 'icon'
-        image.alt = 'icon error'
-
-        let errorText = document.createElement('p')
-        errorText.textContent = 'Please provide a valid email'
-        errorText.classList.add('error-text')
-        errorText.id = 'errorText'
-
-        form.email.classList.remove('valid-email')
         form.email.classList.add('invalid-email')
 
-        if (form.lastChild.id != 'icon') form.append(image)
-        if (form.lastChild.id != 'errorText') form.append(errorText)
+        if (!form.icon) {
+            let image = document.createElement('img')
+            image.src = 'images/icon-error.svg'
+            image.classList.add('icon-error')
+            image.id = 'icon'
+            image.alt = 'icon error'
+            form.append(image)
+        }
+
+        if (!form.children.errorText) {
+            let errorText = document.createElement('p')
+            errorText.textContent = 'Please provide a valid email'
+            errorText.classList.add('error-text')
+            errorText.id = 'errorText'
+            form.append(errorText)
+        }
     }
 })
+
+if (mq.matches) bgPattern.remove()
