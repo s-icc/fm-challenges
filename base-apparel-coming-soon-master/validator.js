@@ -15,16 +15,16 @@ form.addEventListener('submit', (e) => {
     let email = form.email.value
 
     if (validateEmail(email)) {
-        form.email.classList.remove('invalid-email')
+        form.email.classList.remove('form__input--invalid')
         if (form.icon) icon.remove()
         if (form.children.errorText) errorText.remove()
     } else {
-        form.email.classList.add('invalid-email')
+        form.email.classList.add('form__input--invalid')
 
         if (!form.icon) {
             let image = document.createElement('img')
             image.src = 'images/icon-error.svg'
-            image.classList.add('icon-error')
+            image.classList.add('form__icon-error')
             image.id = 'icon'
             image.alt = 'icon error'
             form.append(image)
@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) => {
         if (!form.children.errorText) {
             let errorText = document.createElement('p')
             errorText.textContent = 'Please provide a valid email'
-            errorText.classList.add('error-text')
+            errorText.classList.add('form__error-text')
             errorText.id = 'errorText'
             form.append(errorText)
         }

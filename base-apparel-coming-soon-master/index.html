@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- displays site properly based on user's device -->
 
         <link
             rel="icon"
@@ -25,10 +24,10 @@
     </head>
     <body>
         <article class="card">
-            <div class="bg-gradient"></div>
+            <div class="card__gradient"></div>
             <img
                 src="images/bg-pattern-desktop.svg"
-                class="bg-pattern"
+                class="card__pattern"
                 id="bgPattern"
                 alt="pattern"
             />
@@ -36,29 +35,29 @@
             <div class="card__header">
                 <img
                     src="images/logo.svg"
-                    class="logo"
+                    class="card__logo"
                     alt="logo Base Apparel"
                 />
             </div>
 
             <div class="card__content">
-                <h1 class="coming-soon">
-                    <span class="were">We're </span>coming soon
+                <h1 class="title">
+                    <span class="title__span">We're </span>coming soon
                 </h1>
-                <p class="coming-soon__message">
+                <p class="card__message">
                     Hello fellow shoppers! We're currently building our new
                     fashion store. Add your email below to stay up-to-date with
                     announcements and our launch deals.
                 </p>
-                <form id="form" class="form-container">
+                <form id="form" class="form">
                     <input
                         type="text"
                         name="email"
                         id="email"
-                        class="input-email"
+                        class="form__input"
                         placeholder="Email Address"
                     />
-                    <button type="submit" class="submit-email" id="submit">
+                    <button type="submit" class="form__button" id="submit">
                         <img src="images/icon-arrow.svg" alt="icon arrow" />
                     </button>
                 </form>
@@ -72,17 +71,6 @@
                 <img src="images/hero-desktop.jpg" alt="hero" class="hero" />
             </picture>
         </article>
-
-        <!-- <footer>
-            <p class="attribution">
-                Challenge by
-                <a
-                    href="https://www.frontendmentor.io?ref=challenge"
-                    target="_blank"
-                    >Frontend Mentor</a
-                >. Coded by <a href="#">Stiven Mart&iacute;nez</a>.
-            </p>
-        </footer> -->
 
         <script src="validator.js"></script>
     </body>
