@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Stats preview card component</title>
 
@@ -12,28 +18,27 @@
 </head>
 <body>
   <article class="container">
-    <header class="container__header">
-      <picture>
-        <source srcset="images/image-header-desktop.jpg" media="(min-width: 650px)">
-        <source srcset="images/image-header-mobile.jpg" media="(max-width: 650px)">
-        <img srcset="images/image-header-desktop.jpg" alt="header image">
-      </picture>
-    </header>
+    <picture class="image-container">
+      <source srcset="images/image-header-desktop.jpg" media="(min-width: 650px)">
+      <source srcset="images/image-header-mobile.jpg" media="(max-width: 650px)">
+      <img srcset="images/image-header-desktop.jpg" class="container__image" alt="header image">
+    </picture>
+
     <article class="content">
       <h2 class="content__title">Get <span class="content__title--violet">insights</span> that help your business grow.</h2>
       <p class="content__text">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
       <footer class="content__footer">
-        <div class="content__stats">
-          <p class="content__number">10k+</p>
-          <p class="content__text">companies</p>
+        <div class="stats">
+          <p class="stats__number lowercase">10k+</p>
+          <p class="stats__text">companies</p>
         </div>
-        <div class="content__stats">
-          <p class="content__number">314</p>
-          <p class="content__text">templates</p>
+        <div class="stats">
+          <p class="stats__number">314</p>
+          <p class="stats__text">templates</p>
         </div>
-        <div class="content__stats">
-          <p class="content__number">12m+</p>
-          <p class="content__text">queries</p>
+        <div class="stats">
+          <p class="stats__number">12m+</p>
+          <p class="stats__text">queries</p>
         </div>
       </footer>
     </article>
