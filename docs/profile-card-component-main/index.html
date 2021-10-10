@@ -11,43 +11,56 @@
 			href="./images/favicon-32x32.png"
 		/>
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+
 		<link rel="stylesheet" href="styles.css" />
 
 		<title>Frontend Mentor | Profile card component</title>
 	</head>
 	<body>
-		<img src="images/bg-pattern-top.svg" alt="patter top" class="pattern-top" />
+		<img
+			src="images/bg-pattern-top.svg"
+			alt="pattern top"
+			class="pattern-top"
+		/>
 		<img
 			src="images/bg-pattern-bottom.svg"
-			alt="patter bottom"
+			alt="pattern bottom"
 			class="pattern-bottom"
 		/>
 		<article class="card">
 			<header class="header">
-				<img
-					src="images/bg-pattern-card.svg"
-					alt="banner"
-					class="header__banner"
-				/>
 				<img
 					src="images/image-victor.jpg"
 					alt="profile pic"
 					class="header__profile-pic"
 				/>
 			</header>
-			<p class="text--bold text--large">
-				Victor Crest <span class="text--light">26</span>
-			</p>
-			<p class="text--light text--normal">London</p>
+			<div class="main">
+				<p class="name text--bold text--normal">
+					Victor Crest <span class="age text--light">26</span>
+				</p>
+				<p class="country main-text text--light text--small">London</p>
+			</div>
 			<footer class="footer">
 				<div class="footer__stats">
-					<span class="text--bold text--large">80K </span>Followers
+					<span class="text--bold text--normal">80K </span>
+					<span class="description text--extrasmall text--light"
+						>Followers</span
+					>
 				</div>
 				<div class="footer__stats">
-					<span class="text--bold text--large">803K </span>Likes
+					<span class="text--bold text--normal">803K </span>
+					<span class="description text--extrasmall text--light">Likes</span>
 				</div>
 				<div class="footer__stats">
-					<span class="text--bold text--large">1.4K </span>Photos
+					<span class="text--bold text--normal">1.4K </span>
+					<span class="description text--extrasmall text--light">Photos</span>
 				</div>
 			</footer>
 		</article>
