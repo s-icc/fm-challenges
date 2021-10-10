@@ -1,2 +1,2 @@
-# SCREENSHOT
+# Screenshot
 ![screenshot](images/screenshot.png)
