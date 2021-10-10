@@ -12,7 +12,11 @@
 
 body {
 	margin: 0;
+}
+
+.wrapper {
 	min-height: 100vh;
+	position: relative;
 	background-color: var(--dark-cyan);
 	font-family: 'Kumbh Sans', sans-serif;
 	text-align: center;
@@ -47,7 +51,6 @@ body {
 .pattern-top,
 .pattern-bottom {
 	position: absolute;
-	z-index: -1;
 }
 
 .pattern-top {
@@ -66,6 +69,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	z-index: 1;
 	overflow: hidden;
 }
 
